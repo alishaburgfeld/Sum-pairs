@@ -12,13 +12,3 @@ def sum_pairs(arr, target):
         list[tuple[a, b]]: List of pairs of elements who sum to the target
     """
 
-    arr_set = set(arr)
-
-    result = list()
-    for el in arr_set:
-        candidate = target - el
-
-        if candidate >= el and candidate in arr_set:
-            result.append([el, candidate])
-
-    return result
